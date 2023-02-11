@@ -1,0 +1,30 @@
+# More info on PS1, PS2, etc. here:
+# https://unix.stackexchange.com/questions/193659/in-which-situations-are-ps2-ps3-ps4-used-as-the-prompt
+
+PSLINE1='┌─ %B%F{#f9bb49}%n%f%b in %B%F{#f9bb49}%~%f%b'
+PSLINE2='└ %(!.#.$) '
+
+PS1=$PSLINE1$'\n'$PSLINE2
+
+function virtualenv_info(){
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        venv="${VIRTUAL_ENV##*/}" # Strip out the path and just leave the env name
+        PSLINE1_ENV=$PSLINE1$' %F{#888888}('$venv$')%f'
+        PS1=$PSLINE1_ENV$'\n'$PSLINE2
+    fi
+}
+
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1 # disable the default virtualenv prompt change
+
+function precmd() {
+    # Print a new line between commands, except on the first line
+    # It works well with C-l, but fails when using the "clear" command
+    if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then
+        NEW_LINE_BEFORE_PROMPT=1
+    elif [ "$NEW_LINE_BEFORE_PROMPT" -eq 1 ]; then
+        echo ""
+    fi
+    # Also add venv info
+    eval virtualenv_info
+}

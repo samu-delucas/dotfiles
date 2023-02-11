@@ -1,0 +1,1164 @@
+{
+  "usepac": {
+    "prefix": "usepac",
+    "description": "usepackage",
+    "body": "\\usepackage{ $1\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "inp": {
+    "prefix": "inp",
+    "description": "input",
+    "body": "\\input{$1\\} $0"
+  },
+  "noin": {
+    "prefix": "noin",
+    "description": "noindent",
+    "body": "\\noindent",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "sec": {
+    "prefix": "sec",
+    "description": "Section",
+    "body": "\\section$1{ $2  \\} $0"
+  },
+  "ssec": {
+    "prefix": "ssec",
+    "description": "Subsection",
+    "body": "\\subsection$1{ $2  \\} $0"
+  },
+  "sssec": {
+    "prefix": "sssec",
+    "description": "Subsubsection",
+    "body": "\\subsubsection$1{ $2  \\} $0"
+  },
+  "label": {
+    "prefix": "label",
+    "description": "Label",
+    "body": "\\label{$1\\} $0"
+  },
+  "ref": {
+    "prefix": "ref",
+    "description": "reference",
+    "body": "\\ref{$1\\} $0"
+  },
+  "eqref": {
+    "prefix": "eqref",
+    "description": "equation reference",
+    "body": "\\eqref{eq:$1\\} $0"
+  },
+  "ci": {
+    "prefix": "ci",
+    "description": "cite",
+    "body": "\\cite{$1\\} $0"
+  },
+  "{": {
+    "prefix": "{",
+    "description": "\\{ \\}",
+    "body": "\\left\\{ $1 \\right\\\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "[": {
+    "prefix": "[",
+    "description": "\\[ \\]",
+    "body": "\\left[ $1 \\right] $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "(": {
+    "prefix": "(",
+    "description": "\\left( \\right) ",
+    "body": "\\left( $1 \\right) $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "md": {
+    "prefix": "md",
+    "description": "display math",
+    "body": [
+      "\\begin{align*\\}",
+      "$1",
+      "\\end{align*\\} $0"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "ml": {
+    "prefix": "ml",
+    "description": "inline math",
+    "body": "\\$ $1 \\$ $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "bf": {
+    "prefix": "bf",
+    "description": "bold",
+    "body": "\\textbf{$1\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "proof": {
+    "prefix": "proof",
+    "description": "proof environment",
+    "body": [
+      "\\begin{proof\\}",
+      "$0",
+      "\\end{proof\\}"
+    ]
+  },
+  "pmat": {
+    "prefix": "pmat",
+    "description": "pmatrix",
+    "body": [
+      "\\begin{pmatrix\\}",
+      "$1",
+      "",
+      "\\end{pmatrix\\} $0"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "begal": {
+    "prefix": "begal",
+    "description": "\\begin{align*} environment",
+    "body": [
+      "\\begin{alignat*\\}{$1\\}",
+      "$0",
+      "\\end{alignat*\\}"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "beg": {
+    "prefix": "beg",
+    "description": "begin new environment",
+    "body": [
+      "\\begin{$1\\}",
+      "$0",
+      "\\end{$1\\}"
+    ]
+  },
+  "fr": {
+    "prefix": "fr",
+    "description": "frame beamer",
+    "body": [
+      "\\begin{frame\\}[allowframebreaks]",
+      "$1",
+      "\\end{frame\\} $0"
+    ]
+  },
+  "thm": {
+    "prefix": "thm",
+    "description": "Theorem",
+    "body": [
+      "\\begin{thm\\}",
+      "$1",
+      "\\end{thm\\} $0"
+    ]
+  },
+  "definicion": {
+    "prefix": "definicion",
+    "description": "Definition",
+    "body": [
+      "\\begin{defn\\}",
+      "$1",
+      "\\end{defn\\} $0"
+    ]
+  },
+  "lema": {
+    "prefix": "lema",
+    "description": "Lemma",
+    "body": [
+      "\\begin{lemma\\}",
+      "$1",
+      "\\end{lemma\\} $0"
+    ]
+  },
+  "corolario": {
+    "prefix": "corolario",
+    "description": "Corollary",
+    "body": [
+      "\\begin{corr\\}",
+      "$1",
+      "\\end{corr\\} $0"
+    ]
+  },
+  "ejemplo": {
+    "prefix": "ejemplo",
+    "description": "Example",
+    "body": [
+      "\\begin{example\\}",
+      "$1",
+      "\\end{example\\} $0"
+    ]
+  },
+  "ejemplos": {
+    "prefix": "ejemplos",
+    "description": "Examples",
+    "body": [
+      "\\begin{example\\}",
+      "    \\leavevmode",
+      "    \\vspace{-1.5em}",
+      "    \\begin{enumerate\\}",
+      "        \\item $1",
+      "    \\end{enumerate\\}",
+      "\\end{example\\} $0"
+    ]
+  },
+  "fixspacing": {
+    "prefix": "fixspacing",
+    "description": "Fix spacing before itemize or enum",
+    "body": [
+        "\\leavevmode",
+        "\\vspace{-1.5em}",
+        "$1"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "enum": {
+    "prefix": "enum",
+    "description": "enumerate environment",
+    "body": [
+      "\\begin{enumerate\\}",
+      "\\item $1",
+      "\\end{enumerate\\}$0"
+    ]
+  },
+  "renum": {
+    "prefix": "renum",
+    "description": "roman enumerate environment",
+    "body": [
+      "\\begin{enumerate\\}[label=\\roman*)]",
+      "\\item $1",
+      "\\end{enumerate\\}$0"
+    ]
+  },
+  "anum": {
+    "prefix": "anum",
+    "description": "alphabetical enumerate environment",
+    "body": [
+      "\\begin{enumerate\\}[label=\\alph*)]",
+      "\\item $1",
+      "\\end{enumerate\\}$0"
+    ]
+  },
+  "itm": {
+    "prefix": "itm",
+    "description": "itemize",
+    "body": [
+      "\\begin{itemize\\}",
+      "\\item $1",
+      "\\end{itemize\\}$0"
+    ]
+  },
+  "item": {
+    "prefix": "item",
+    "description": "item",
+    "body": "\\item $0"
+  },
+  "text": {
+    "prefix": "text",
+    "description": "text in Maths",
+    "body": "\\text{ $1 \\} $0"
+  },
+  "case": {
+    "prefix": "case",
+    "description": "cases",
+    "body": [
+      "\\begin{cases\\}",
+      "$1 & $0",
+      "\\end{cases\\}"
+    ]
+  },
+  "table": {
+    "prefix": "table",
+    "description": "table",
+    "body": [
+      "\\begin{tabular\\}{ $1 \\}",
+      "$2 & $3",
+      "\\end{tabular\\}"
+    ]
+  },
+  "fig": {
+    "prefix": "fig",
+    "description": "figure env",
+    "body": [
+      "\\begin{figure\\}[H]",
+      "$1",
+      "\\end{figure\\} $0"
+    ]
+  },
+  "fun": {
+    "prefix": "fun",
+    "description": "function ",
+    "body": "$1 : $2 \\to $3 , \\ $4 \\mapsto $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "sum": {
+    "prefix": "sum",
+    "description": "Sum",
+    "body": "\\sum_{ $1 = $2 \\}^{ $3 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "prod": {
+    "prefix": "prod",
+    "description": "Product",
+    "body": "\\prod_{ $1 \\}^{ $2 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "intab": {
+    "prefix": "intab",
+    "description": "Int a to b",
+    "body": "\\int_a^b $1 \\ d $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "intzo": {
+    "prefix": "intzo",
+    "description": "Int 0 to 1",
+    "body": "\\int_0^1 $1 \\ d $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "intzp": {
+    "prefix": "intzp",
+    "description": "Int 0 to 2pi",
+    "body": "\\int_0^{2\\pi\\} $1 \\ d $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "int": {
+    "prefix": "int",
+    "description": "Int ",
+    "body": "\\int_{ $1 \\}^{ $2 \\} $3 \\ d $0"
+  },
+  "pint": {
+    "prefix": "pint",
+    "description": "path Integral",
+    "body": "\\int_{\\gamma_{ $1 \\}\\} $2 \\ dz $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "trcirc": {
+    "prefix": "trcirc",
+    "description": "trace circle ",
+    "body": "\\partial U_{$1\\}\\left( $2 \\right) $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "frac": {
+    "prefix": "frac",
+    "description": "Frac",
+    "body": "\\frac{ $1 \\}{ $2 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "sqrt": {
+    "prefix": "sqrt",
+    "description": "square root",
+    "body": "\\sqrt{ $1  \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "skal": {
+    "prefix": "skal",
+    "description": "Skalarprodukt",
+    "body": "\\left\\langle $1 , $2 \\right\\rangle $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "norm": {
+    "prefix": "norm",
+    "description": "Norm",
+    "body": "\\left\\Vert $1 \\right\\Vert $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "eunorm": {
+    "prefix": "eunorm",
+    "description": "Euklidische Norm",
+    "body": "\\left\\Vert $1 \\right\\Vert_2 $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "mnorm": {
+    "prefix": "mnorm",
+    "description": "Maximumsnorm",
+    "body": "\\left\\Vert $1 \\right\\Vert_\\infty $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "abs": {
+    "prefix": "abs",
+    "description": "Absolutbetrag",
+    "body": "\\left| $1 \\right| $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "ntn": {
+    "prefix": "ntn",
+    "description": "n times n",
+    "body": "n \\times n $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "ntm": {
+    "prefix": "ntm",
+    "description": "n times m",
+    "body": "n \\times m $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "mtn": {
+    "prefix": "mtn",
+    "description": "m times n",
+    "body": "m \\times n $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "mtm": {
+    "prefix": "mtm",
+    "description": "m times m",
+    "body": "m \\times m $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "to": {
+    "prefix": "to",
+    "description": "\\to",
+    "body": "\\to $0"
+  },
+  "mto": {
+    "prefix": "mto",
+    "description": "mapsto",
+    "body": "\\mapsto $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "T": {
+    "prefix": "T",
+    "description": "transpose",
+    "body": "^T $0"
+  },
+  "^": {
+    "prefix": "^",
+    "description": "power",
+    "body": "^{ $1 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "_": {
+    "prefix": "_",
+    "description": "index",
+    "body": "_{ $1 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "set": {
+    "prefix": "set",
+    "description": "set",
+    "body": "\\left\\{ $1 \\mid $2 \\right\\\\} $0"
+  },
+  "ext": {
+    "prefix": "ext",
+    "description": "Exterior of a simple curve",
+    "body": "\\text{Ext\\}\\left( $1 \\right) $0"
+  },
+  "perp": {
+    "prefix": "perp",
+    "description": "perp",
+    "body": "^{\\perp\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "part": {
+    "prefix": "part",
+    "description": "partial",
+    "body": "\\partial $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "dd": {
+    "prefix": "dd",
+    "description": "differentiate",
+    "body": "\\frac{d $1 \\}{d $2 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "pd": {
+    "prefix": "pd",
+    "description": "partial differentiable",
+    "body": "\\frac{ \\partial $1 \\}{ \\partial $2\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "stkrel": {
+    "prefix": "stkrel",
+    "description": "stackrel",
+    "body": "\\stackrel{$1\\}{$2\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "sm": {
+    "prefix": "sm",
+    "description": "setminus",
+    "body": "\\setminus $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "sup": {
+    "prefix": "sup",
+    "description": "superset",
+    "body": "\\supset $0"
+  },
+  "sub": {
+    "prefix": "sub",
+    "description": "subset",
+    "body": "\\subset $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "nsub": {
+    "prefix": "nsub",
+    "description": "not subset",
+    "body": "\\nsubseteq $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "in": {
+    "prefix": "in",
+    "description": "element in",
+    "body": "\\in $0"
+  },
+  "ni": {
+    "prefix": "ni",
+    "description": "element in",
+    "body": "\\ni $0"
+  },
+  "nin": {
+    "prefix": "nin",
+    "description": "not element in",
+    "body": "\\notin $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "neq": {
+    "prefix": "neq",
+    "description": "not equal",
+    "body": "\\neq $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "leq": {
+    "prefix": "leq",
+    "description": "less equal",
+    "body": "\\leq $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "geq": {
+    "prefix": "geq",
+    "description": "greater equal",
+    "body": "\\geq $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "approx": {
+    "prefix": "approx",
+    "description": "approx",
+    "body": "\\approx $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "sim": {
+    "prefix": "sim",
+    "description": "similar",
+    "body": "\\sim $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "cong": {
+    "prefix": "cong",
+    "description": "congruent",
+    "body": "\\equiv",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "impl": {
+    "prefix": "impl",
+    "description": "implies",
+    "body": "\\implies $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "impb": {
+    "prefix": "impb",
+    "description": "implied by",
+    "body": "\\impliedby $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "cup": {
+    "prefix": "cup",
+    "description": "cup",
+    "body": "\\cup $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "cap": {
+    "prefix": "cap",
+    "description": "cap",
+    "body": "\\cap $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "comp": {
+    "prefix": "comp",
+    "description": "complement",
+    "body": "$1 ^{c\\} $0"
+  },
+  "bs": {
+    "prefix": "bs",
+    "description": "backslash",
+    "body": "\\backslash $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "oneq": {
+    "prefix": "oneq",
+    "description": "overset on =",
+    "body": "\\overset{ $1 \\}{=\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "os": {
+    "prefix": "os",
+    "description": "overset",
+    "body": "\\overset{ $1 \\}{ $2\\} $0"
+  },
+  "ub": {
+    "prefix": "ub",
+    "description": "underbrace",
+    "body": "\\underbrace{ $1 \\}_{ $2 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "tilde": {
+    "prefix": "tilde",
+    "description": "widetilde",
+    "body": "\\widetilde{ $1 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "hat": {
+    "prefix": "hat",
+    "description": "widehat",
+    "body": "\\widehat{ $1 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "spur": {
+    "prefix": "spur",
+    "description": "Spur",
+    "body": "\\text{Spur(\\$ $1 \\$) \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "ggt": {
+    "prefix": "ggt",
+    "description": "ggT",
+    "body": "\\text{ggT\\}( $1, $2 ) $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "con": {
+    "prefix": "con",
+    "description": "complex conjugate",
+    "body": "\\overline{ $1 \\} $0"
+  },
+  "oo": {
+    "prefix": "oo",
+    "description": "infinty",
+    "body": "\\infty $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "o": {
+    "prefix": "o",
+    "description": "circle",
+    "body": "\\circ $0"
+  },
+  "max": {
+    "prefix": "max",
+    "description": "max",
+    "body": "\\max_{$1\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "min": {
+    "prefix": "min",
+    "description": "min",
+    "body": "\\min_{$1\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "lim": {
+    "prefix": "lim",
+    "description": "lim",
+    "body": "\\lim\\limits_{ $1 \\to $2 \\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "det": {
+    "prefix": "det",
+    "description": "determinant ",
+    "body": "\\det( $1 ) $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "sin": {
+    "prefix": "sin",
+    "description": "sine",
+    "body": "\\sin( $1 ) $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "cos": {
+    "prefix": "cos",
+    "description": "cosine",
+    "body": "\\cos( $1 ) $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "mod": {
+    "prefix": "mod",
+    "description": "modulo",
+    "body": "\\mod $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "exp": {
+    "prefix": "exp",
+    "description": "exponential function",
+    "body": "\\exp( $1 ) $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "RR": {
+    "prefix": "RR",
+    "description": "R",
+    "body": "\\mathbb{R\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "FF": {
+    "prefix": "FF",
+    "description": "Field",
+    "body": "\\mathbb{F\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "PP": {
+    "prefix": "PP",
+    "description": "Projective space",
+    "body": "\\mathbb{P\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "QQ": {
+    "prefix": "QQ",
+    "description": "Q",
+    "body": "\\mathbb{Q\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "CC": {
+    "prefix": "CC",
+    "description": "C",
+    "body": "\\mathbb{C\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "CS": {
+    "prefix": "CS",
+    "description": "C star",
+    "body": "\\mathbb{C\\}^* $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "DD": {
+    "prefix": "DD",
+    "description": "D",
+    "body": "\\mathbb{D\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "HH": {
+    "prefix": "HH",
+    "description": "H",
+    "body": "\\mathbb{H\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "SS": {
+    "prefix": "SS",
+    "description": "S",
+    "body": "\\mathbb{S\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "ZZ": {
+    "prefix": "ZZ",
+    "description": "Z",
+    "body": "\\mathbb{Z\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "NN": {
+    "prefix": "NN",
+    "description": "N",
+    "body": "\\mathbb{N\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "AA": {
+    "prefix": "AA",
+    "description": "A",
+    "body": "\\mathbb{A\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "KK": {
+    "prefix": "KK",
+    "description": "K",
+    "body": "\\mathbb{K\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "pi": {
+    "prefix": "pi",
+    "description": "pi",
+    "body": "\\pi $0"
+  },
+  "-O": {
+    "prefix": "-O",
+    "description": "Omega",
+    "body": "\\Omega $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-l": {
+    "prefix": "-l",
+    "description": "lambda",
+    "body": "\\lambda $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-L": {
+    "prefix": "-L",
+    "description": "Lambda",
+    "body": "\\Lambda $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-a": {
+    "prefix": "-a",
+    "description": "alpha",
+    "body": "\\alpha $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-o": {
+    "prefix": "-o",
+    "description": "omega",
+    "body": "\\omega $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-b": {
+    "prefix": "-b",
+    "description": "beta",
+    "body": "\\beta $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-e": {
+    "prefix": "-e",
+    "description": "epsilon",
+    "body": "\\varepsilon $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-d": {
+    "prefix": "-d",
+    "description": "delta",
+    "body": "\\delta $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-D": {
+    "prefix": "-D",
+    "description": "Delta",
+    "body": "\\Delta $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-g": {
+    "prefix": "-g",
+    "description": "gamma",
+    "body": "\\gamma $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-sig": {
+    "prefix": "-sig",
+    "description": "sigma",
+    "body": "\\sigma $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-th": {
+    "prefix": "-th",
+    "description": "theta",
+    "body": "\\theta $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-p": {
+    "prefix": "-p",
+    "description": "phi",
+    "body": "\\varphi $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "-z": {
+    "prefix": "-z",
+    "description": "zeta",
+    "body": "\\zeta $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "bigo": {
+    "prefix": "bigo",
+    "description": "O grande de Landau",
+    "body": "\\mathcal{O\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "smallO": {
+    "prefix": "smallO",
+    "description": "o pequeña de Landau",
+    "body": "\\mathcal{o\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "mc": {
+    "prefix": "mc",
+    "description": "mathcal",
+    "body": "\\mathcal{$1\\} $0"
+  },
+  "l..": {
+    "prefix": "l..",
+    "description": "ldots",
+    "body": "\\ldots $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "v..": {
+    "prefix": "v..",
+    "description": "vdots",
+    "body": "\\vdots $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "c..": {
+    "prefix": "c..",
+    "description": "cdots",
+    "body": "\\cdots $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "d..": {
+    "prefix": "d..",
+    "description": "diagonal dots",
+    "body": "\\ddots $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "cdot": {
+    "prefix": "cdot",
+    "description": "cdot",
+    "body": "\\cdot $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "tikz": {
+    "prefix": "tikz",
+    "description": "tikzpicture",
+    "body": [
+      "\\begin{tikzpicture\\}",
+      "$1",
+      "\\end{tikzpicture\\} $0"
+    ]
+  },
+  "coord": {
+    "prefix": "coord",
+    "description": "draw coordinate 2D system",
+    "body": [
+      "\\draw[axis] (-2,0) -- (3 ,0);",
+      "\\draw[axis] (0,-1) -- (0,2);"
+    ]
+  },
+  "point": {
+    "prefix": "point",
+    "description": "mark point in coordinate system",
+    "body": "\\filldraw ($1) circle (1pt) ; $0"
+  },
+  "iff": {
+    "prefix": "iff",
+    "description": "if and only if",
+    "body": "if and only if $0"
+  },
+  "wlog": {
+    "prefix": "wlog",
+    "description": "Sin pérdida de generalidad",
+    "body": "Sin pérdida de generalidad $0"
+  },
+  "st": {
+    "prefix": "st",
+    "description": "st in math mode",
+    "body": "\\quad \\text{ such that \\} $0"
+  },
+  "epii": {
+    "prefix": "epii",
+    "description": "e elevado a pi i",
+    "body": "e^{\\pi i} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "e2piin": {
+    "prefix": "e2piin",
+    "description": "e elevado a 2pi i/n",
+    "body": "e^{\\frac{2\\pi}{n}i} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "efraci": {
+    "prefix": "efraci",
+    "description": "e elevado a fracción por i",
+    "body": "e^{\\frac{$1}{$2} i} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  }
+}

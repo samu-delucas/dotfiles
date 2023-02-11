@@ -1,0 +1,780 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def comment():
+    return vim.eval('vimtex#syntax#in_comment()') == '1'
+
+def env(name):
+    [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
+    return x != '0' and x != '0'
+
+endglobal
+
+snippet tab "quad"
+\quad $0
+endsnippet
+
+snippet usepac "usepackage" A
+\usepackage{ $1} $0
+endsnippet
+
+snippet inp "input"
+\input{$1} $0
+endsnippet
+
+snippet noin "noindent" A
+\noindent
+endsnippet
+
+#structures
+
+snippet sec "Section"
+\section$1{ $2  } $0
+endsnippet
+
+snippet ssec "Subsection"
+\subsection$1{ $2  } $0
+endsnippet
+
+snippet sssec "Subsubsection"
+\subsubsection$1{ $2  } $0
+endsnippet
+
+snippet label "Label"
+\label{$1} $0
+endsnippet
+
+snippet ref "Reference"
+\ref{$1} $0
+endsnippet
+
+snippet eqref "Equation reference"
+\eqref{eq:$1} $0
+endsnippet
+#braces
+
+
+snippet { "\{ \}" A
+\left\\{ $1 \right\\} $0
+endsnippet
+
+snippet [ "\[ \]" A
+\left[ $1 \right] $0
+endsnippet
+
+snippet ( "()" A
+($1) $0
+endsnippet
+
+context "math()"
+snippet ( "\left( \right) " A
+\left( $1 \right) $0
+endsnippet
+
+
+#environments
+
+snippet md "display math" bA
+\begin{align*}
+$1
+\end{align*} $0
+endsnippet
+
+snippet ml "inline math" A
+$ $1 $ $0
+endsnippet
+
+snippet bf "bold" A
+\textbf{$1} $0
+endsnippet
+
+snippet proof "proof environment"
+\begin{proof}
+$0
+\end{proof}
+endsnippet
+
+context "math()"
+snippet pmat "pmatrix" A
+\begin{pmatrix}
+$1
+
+\end{pmatrix} $0
+endsnippet
+
+snippet begal  "\begin{align*} environment" bA
+\begin{alignat*}{$1}
+$0
+\end{alignat*}
+endsnippet
+
+snippet beg "begin new environment"
+\begin{$1}
+$0
+\end{$1}
+endsnippet
+
+snippet fr "frame beamer"
+\begin{frame}[allowframebreaks]
+$1
+\end{frame} $0
+endsnippet
+
+snippet thm "Theorem"
+\begin{thm}
+$1
+\end{thm} $0
+endsnippet
+
+snippet def "Definition"
+\begin{Def}
+$1
+\end{Def} $0
+endsnippet
+
+snippet lem "Lemma"
+\begin{lem}
+$1
+\end{lem} $0
+endsnippet
+
+snippet kor "Korrolar"
+\begin{kor}
+$1
+\end{kor} $0
+endsnippet
+
+snippet bem "Bemerkung"
+\begin{bem}
+$1
+\end{bem} $0
+endsnippet
+
+snippet example "Example"
+\begin{example}
+$1
+\end{example} $0
+endsnippet
+
+snippet erin "Erinnerung"
+\begin{erin}
+$1
+\end{erin} $0
+endsnippet
+
+snippet enum "enumerate environment"
+\begin{enumerate}
+\item $1
+\end{enumerate}$0
+endsnippet
+
+snippet renum "roman enumerate environment"
+\begin{enumerate}[label=\roman*)]
+\item $1
+\end{enumerate}$0
+endsnippet
+
+snippet anum "alphabetical enumerate environment"
+\begin{enumerate}[label=\alph*)]
+\item $1
+\end{enumerate}$0
+endsnippet
+
+snippet itm "itemize"
+\begin{itemize}
+\item $1
+\end{itemize}$0
+endsnippet
+
+snippet item "item"
+\item $0
+endsnippet
+
+context "math()"
+snippet text "text in Maths" A
+\text{ $1 } $0
+endsnippet
+
+context "math()"
+snippet case "cases"
+\begin{cases}
+$1 & $0
+\end{cases}
+endsnippet
+
+snippet table "table"
+\begin{tabular}{ $1 }
+$2 & $3
+\end{tabular}
+endsnippet
+
+snippet fig "figure env"
+\begin{figure}[H]
+$1
+\end{figure} $0
+endsnippet
+
+#mathematical symbols
+
+
+context "math()"
+snippet fun "function " A
+$1 : $2 \to $3 , \ $4 \mapsto $0
+endsnippet
+snippet 12pii "1 over 2 pi i" A
+\frac{1}{2 \pi i}
+endsnippet
+
+context "math()"
+snippet O "Self-defined composition of maps"
+\underset{ $1 = $2 }{\overset{ $3 }{\bigcirc } } $0
+endsnippet
+
+
+context "math()"
+snippet sum "Sum" A
+\sum_{ $1 = $2 }^{ $3 } $0
+endsnippet
+
+context "math()"
+snippet prod "Product" A
+\prod_{ $1 }^{ $2 } $0
+endsnippet
+
+context "math()"
+snippet intab "Int a to b" A
+\int_a^b $1 \ d $0
+endsnippet
+
+context "math()"
+snippet intzo "Int 0 to 1" A
+\int_0^1 $1 \ d $0
+endsnippet
+
+context "math()"
+snippet intzp "Int 0 to 2pi" A
+\int_0^{2\pi} $1 \ d $0
+endsnippet
+
+context "math()"
+snippet int "Int "
+\int_{ $1 }^{ $2 } $3 \ d $0
+endsnippet
+
+context "math()"
+snippet pint "path Integral" A
+\int_{\gamma_{ $1 }} $2 \ dz $0
+endsnippet
+
+context "math()"
+snippet trcirc "trace circle " A
+\partial U_{$1}\left( $2 \right) $0
+endsnippet
+
+context "math()"
+snippet frac "Frac" A
+\frac{ $1 }{ $2 } $0
+endsnippet
+
+context "math()"
+snippet sqrt "square root" A
+\sqrt{ $1  } $0
+endsnippet
+
+context "math()"
+snippet skal "Skalarprodukt" A
+\left\langle $1 , $2 \right\rangle $0
+endsnippet
+
+context "math()"
+snippet norm "Norm" A
+\left\Vert $1 \right\Vert $0
+endsnippet
+
+context "math()"
+snippet eunorm "Euklidische Norm" A
+\left\Vert $1 \right\Vert_2 $0
+endsnippet
+
+context "math()"
+snippet mnorm "Maximumsnorm" A
+\left\Vert $1 \right\Vert_\infty $0
+endsnippet
+
+context "math()"
+snippet abs "Absolutbetrag" A
+\left| $1 \right| $0
+endsnippet
+
+context "math()"
+snippet ntn "n times n" A
+n \times n $0
+endsnippet
+
+context "math()"
+snippet ntm "n times m" A
+n \times m $0
+endsnippet
+
+context "math()"
+snippet mtn "m times n" A
+m \times n $0
+endsnippet
+
+context "math()"
+snippet mtm "m times m" A
+m \times m $0
+endsnippet
+
+context "math()"
+snippet to "\to" A
+\to $0
+endsnippet
+
+context "math()"
+snippet mto "mapsto" A
+\mapsto $0
+endsnippet
+
+context "math()"
+snippet T  "transpose"
+^T $0
+endsnippet
+
+context "math()"
+snippet ^ "power" A
+^{ $1 } $0
+endsnippet
+
+
+context "math()"
+snippet _ "index" A
+_{ $1 } $0
+endsnippet
+
+#relations
+
+context "math()"
+snippet set "set"
+\left\\{ $1 \mid $2 \right\\} $0
+endsnippet
+
+context "math()"
+snippet ext "Exterior of a simple curve"
+\text{Ext}\left( $1 \right) $0
+endsnippet
+
+context "math()"
+snippet perp "perp" A
+^{\perp} $0
+endsnippet
+
+context "math()"
+snippet part "partial" A
+\partial $0
+endsnippet
+
+context "math()"
+snippet dd "differentiate" A
+\frac{d $1 }{d $2 } $0
+endsnippet
+
+context "math()"
+snippet pd "partial differentiable" A
+\frac{ \partial $1 }{ \partial $2} $0
+endsnippet
+
+snippet stkrel "stackrel" A
+\stackrel{$1}{$2} $0
+endsnippet
+
+
+context "math()"
+snippet sm "setminus" A
+\setminus $0
+endsnippet
+
+context "math()"
+snippet sup "superset"
+\supset $0
+endsnippet
+
+context "math()"
+snippet sub "subset" A
+\subset $0
+endsnippet
+
+snippet nsub "not subset" A
+\nsubseteq $0
+endsnippet
+
+context "math()"
+snippet in "element in"
+\in $0
+endsnippet
+
+context "math()"
+snippet ni "element in"
+\ni $0
+endsnippet
+
+snippet nin "not element in" A
+\notin $0
+endsnippet
+
+snippet neq "not equal" A
+\neq $0
+endsnippet
+
+snippet leq "less equal" A
+\leq $0
+endsnippet
+
+snippet geq "greater equal" A
+\geq $0
+endsnippet
+
+
+context "math()"
+snippet approx "approx" A
+\approx $0
+endsnippet
+
+context "math()"
+snippet sim "similar" A
+\sim $0
+endsnippet
+
+context "math()"
+snippet cong  "congruent" A
+\equiv
+endsnippet
+
+context "math()"
+snippet iff "iff" A
+\iff $0
+endsnippet
+
+context "math()"
+snippet impl "implies" A
+\implies $0
+endsnippet
+
+context "math()"
+snippet impb "implied by" A
+\impliedby $0
+endsnippet
+
+context "math()"
+snippet cup "cup" A
+\cup $0
+endsnippet
+
+context "math()"
+snippet cap "cap" A
+\cap $0
+endsnippet
+
+context "math()"
+snippet comp "complement"
+$1 ^{c} $0
+endsnippet
+
+context "math()"
+snippet bs "backslash" A
+\backslash $0
+endsnippet
+
+context "math()"
+snippet oneq "overset on =" A
+\overset{ $1 }{=} $0
+endsnippet
+
+context "math()"
+snippet os  "overset"
+\overset{ $1 }{ $2} $0
+endsnippet
+
+context "math()"
+snippet ub "underbrace" A
+\underbrace{ $1 }_{ $2 } $0
+endsnippet
+
+context "math()"
+snippet tilde "widetilde" A
+\widetilde{ $1 } $0
+endsnippet
+
+context "math()"
+snippet hat "widehat" A
+\widehat{ $1 } $0
+endsnippet
+
+context "math()"
+snippet spur "Spur" A
+\text{Spur($ $1 $) } $0
+endsnippet
+
+context "math()"
+snippet ggt "ggT" A
+\text{ggT}( $1, $2 ) $0
+endsnippet
+
+context "math()"
+snippet con "complex conjugate"
+\overline{ $1 } $0
+endsnippet
+
+context "math()"
+snippet oo "infinty" wA
+\infty $0
+endsnippet
+
+context "math()"
+snippet o "circle"
+\circ $0
+endsnippet
+
+context "math()"
+snippet max "max" A
+\max_{$1} $0
+endsnippet
+
+context "math()"
+snippet min "min" A
+\min_{$1} $0
+endsnippet
+
+context "math()"
+snippet  lim "lim" A
+\lim\limits_{ $1 \to $2 } $0
+endsnippet
+
+context "math()"
+snippet det "determinant " A
+\det( $1 ) $0
+endsnippet
+
+context "math()"
+snippet sin "sine" A
+\sin( $1 ) $0
+endsnippet
+
+context "math()"
+snippet cos "cosine" A
+\cos( $1 ) $0
+endsnippet
+
+context "math()"
+snippet mod "modulo" A
+\mod $0
+endsnippet
+
+context "math()"
+snippet exp "exponential function" A
+\exp( $1 ) $0
+endsnippet
+
+
+#\mathbb symbols
+snippet RR "R" A
+\mathbb{R} $0
+endsnippet
+
+snippet FF "Field" A
+\mathbb{F} $0
+endsnippet
+
+snippet PP "Projective space" A
+\mathbb{P} $0
+endsnippet
+
+snippet QQ "Q" A
+\mathbb{Q} $0
+endsnippet
+
+snippet CC "C" A
+\mathbb{C} $0
+endsnippet
+
+context "math()"
+snippet CS "C star" A
+\mathbb{C}^* $0
+endsnippet
+
+
+snippet DD "D" A
+\mathbb{D} $0
+endsnippet
+
+snippet HH "H" A
+\mathbb{H} $0
+endsnippet
+
+snippet SS "S" A
+\mathbb{S} $0
+endsnippet
+
+snippet ZZ "Z" A
+\mathbb{Z} $0
+endsnippet
+
+snippet NN "N" A
+\mathbb{N} $0
+endsnippet
+
+snippet AA "A" A
+\mathbb{A} $0
+endsnippet
+
+snippet KK "K" A
+\mathbb{K} $0
+endsnippet
+
+
+#mathematical constansts and greek letters
+snippet pi "pi"
+\pi $0
+endsnippet
+
+context "math()"
+snippet -O "Omega" A
+\Omega $0
+endsnippet
+
+
+context "math()"
+snippet -l "lambda" A
+\lambda $0
+endsnippet
+
+context "math()"
+snippet -L "Lambda" A
+\Lambda $0
+endsnippet
+
+
+context "math()"
+snippet -a "alpha" A
+\alpha $0
+endsnippet
+
+context "math()"
+snippet -o "omega" A
+\omega $0
+endsnippet
+
+context "math()"
+snippet -b "beta" A
+\beta $0
+endsnippet
+
+context "math()"
+snippet -e "epsilon" A
+\varepsilon $0
+endsnippet
+
+context "math()"
+snippet -d "delta" A
+\delta $0
+endsnippet
+
+context "math()"
+snippet -D "Delta" A
+\Delta $0
+endsnippet
+
+context "math()"
+snippet -g "gamma" A
+\gamma $0
+endsnippet
+
+
+context "math()"
+snippet -sig "sigma" A
+\sigma $0
+endsnippet
+
+context "math()"
+snippet -th "theta" A
+\theta $0
+endsnippet
+
+context "math()"
+snippet -p "phi" A
+\varphi $0
+endsnippet
+
+context "math()"
+snippet -z "zeta" A
+\zeta $0
+endsnippet
+
+#mathcal symbols
+
+context "math()"
+snippet bigo "O grande de Landau" A
+\mathcal{O} $0
+endsnippet
+
+context "math()"
+snippet smallO "o pequeña de Landau" A
+\mathcal{o} $0
+endsnippet
+
+context "math()"
+snippet mc "mathcal"
+\mathcal{$1} $0
+endsnippet
+
+# dots
+snippet l.. "ldots" A
+\ldots $0
+endsnippet
+
+snippet v.. "vdots" A
+\vdots $0
+endsnippet
+
+snippet c.. "cdots" A
+\cdots $0
+endsnippet
+
+snippet d.. "diagonal dots" A
+\ddots $0
+endsnippet
+
+snippet cdot "cdot" A
+\cdot $0
+endsnippet
+
+#Tikz
+snippet tikz "tikzpicture"
+\begin{tikzpicture}
+$1
+\end{tikzpicture} $0
+endsnippet
+
+snippet coord "draw coordinate 2D system"
+\draw[axis] (-2,0) -- (3 ,0);
+\draw[axis] (0,-1) -- (0,2);
+endsnippet
+
+snippet point "mark point in coordinate system"
+\filldraw ($1) circle (1pt) ; $0
+endsnippet
+
+#Abbreviations
+snippet iff "if and only if"
+if and only if $0
+endsnippet
+
+snippet wlog "Sin pérdida de generalidad"
+Sin pérdida de generalidad $0
+endsnippet
+
+context "math()"
+snippet st "st in math mode"
+\quad \text{ such that } $0
+endsnippet

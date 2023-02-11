@@ -1,0 +1,42 @@
+#
+# $ZDOTDIR/.zshrc
+#
+# Main config file, only for my user
+#
+
+# Lines configured by zsh-newuser-install
+HISTFILE=$ZDOTDIR/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+
+# Lines configured by ME -----------------------
+
+# Nice diagram: https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html#implementation
+
+# Alternative on-demand rehash using SIGUSR1 (https://wiki.archlinux.org/title/zsh#Persistent_rehash) (https://bbs.archlinux.org/viewtopic.php?id=215485)
+TRAPUSR1() { rehash }
+
+# Source some files checking their existance
+if [[ -r $ZDOTDIR/.zsh_completion ]]; then
+    source $ZDOTDIR/.zsh_completion
+fi
+
+if [[ -r $ALIASFILE ]]; then
+    source $ALIASFILE
+fi
+
+if [[ -r $ZDOTDIR/.zsh_keybinds ]]; then
+    source $ZDOTDIR/.zsh_keybinds
+fi
+
+if [[ -r $ZDOTDIR/.zsh_custom_autocomplete/_apuntes ]]; then
+    source $ZDOTDIR/.zsh_custom_autocomplete/_apuntes
+fi
+
+if [[ -r $ZDOTDIR/.zsh_theme ]]; then
+    source $ZDOTDIR/.zsh_theme
+fi
+
+# End of lines configured by ME ----------------

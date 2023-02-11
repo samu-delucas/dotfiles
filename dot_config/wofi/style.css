@@ -1,0 +1,55 @@
+window {
+margin: 0px;
+border: 0px solid #404040;
+border-radius: 10px;
+background-color: rgba(0,0,0,0.55);
+font-family: "Anonymice Nerd Font Mono", monospace;
+font-size: 14px;
+backdrop-filter: blur(50px);
+}
+
+#input {
+margin: 5px;
+border: 1px solid #404040;
+border-radius: 10px;
+color: #f0f0f0;
+background-color: rgba(0,0,0,0.8);
+}
+
+#input image {
+	color: #f0f0f0;
+}
+
+#inner-box {
+margin: 5px;
+border: none;
+background-color: rgba(0,0,0,0);
+}
+
+#outer-box {
+margin: 5px;
+border: none;
+background-color: rgba(0,0,0,0);
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+margin: 5px;
+border: none;
+color: #f0f0f0;
+} 
+
+#entry:selected {
+	background-color: rgba(240,240,240,0.9);
+	border-radius: 10px;
+	outline:none;
+}
+
+#text:selected {
+	color: #0f0f0f;
+}
+

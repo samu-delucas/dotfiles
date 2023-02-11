@@ -1,0 +1,5 @@
+_apuntes() {
+    compadd $(ls $APUNTESDIR/4/)
+}
+
+compdef _apuntes apuntes

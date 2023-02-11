@@ -1,0 +1,16 @@
+#
+# $ZDOTDIR/.zshenv
+#
+# Used for setting USER enviroment variables
+#
+
+export EDITOR='nvim'
+# export TERM=xterm-256color # breaks nvim underline (undercurl)
+export TERM=alacritty
+export PATH=/opt/glassfish4/glassfish/bin:$PATH:/home/samuel/.local/bin
+
+export APUNTESDIR=$HOME/uni/apuntes-latex
+export TEXINPUTS=$APUNTESDIR/clases:$APUNTESDIR/paquetes:
+export ALIASFILE=$ZDOTDIR/.aliases.sh
+# export J2EE_HOME=/opt/glassfish4-web/glassfish
+export AS_JAVA=/usr/lib/jvm/java-8-openjdk

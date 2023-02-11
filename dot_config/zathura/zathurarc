@@ -1,0 +1,35 @@
+set font 'Iosevka Nerd Font 11'
+set selection-clipboard clipboard
+set incremental-search true
+set adjust-open 'width'
+set statusbar-home-tilde true
+set n-completion-items 10
+
+set default-bg rgba(0,0,0,0.5)
+set recolor-lightcolor rgba(0,0,0,0)
+set recolor-darkcolor '#EEEEEE'
+
+set completion-bg rgba(0,0,0,0.7)
+set completion-group-bg rgba(0,0,0,0.2)
+set completion-highlight-bg rgba(244,66,92,0)
+set completion-fg '#999999'
+set completion-group-fg '#c42f60'
+set completion-highlight-fg '#FFFFFF'
+
+set render-loading false
+
+set inputbar-bg 'rgba(0,0,0,0.5)'
+set inputbar-fg '#f23c79'
+set statusbar-bg 'rgba(0,0,0,0.5)'
+
+set highlight-color '#999999'
+set highlight-active-color '#e21b5d'
+set highlight-fg '#FFFFFF'
+set highlight-transparency 0.45
+
+set notification-bg 'rgba(0,0,0,0.5)'
+set notification-error-bg 'rgba(0,0,0,0.5)'
+set notification-warning-bg 'rgba(0,0,0,0.5)'
+set notification-fg '#FFFFFF'
+set notification-error-fg '#ed1717'
+set notification-warning-fg '#f79b22'

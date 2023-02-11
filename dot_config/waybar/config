@@ -1,0 +1,200 @@
+{
+    // ~~~~~ MAIN SETTINGS ~~~~~~
+    "layer": "top",	// if bottom then scrolling on widgets and other stuff does not work
+    "position": "top",
+    "height": 25,
+    "width": 1900,
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "spacing": 0,
+
+    // ~~~~~ MODULE POSITIONING ~~~~~
+    "modules-left": [
+    	"wlr/workspaces"
+        //"sway/mode",
+        //"custom/media",
+        //"tray"
+    ],
+    //"modules-center": [
+    	//"hyprland/window"
+    //],
+    "modules-right": [
+    	//"mpd",
+    	//"idle_inhibitor",
+        //"keyboard-state#caps",
+        //"keyboard-state",
+        "bluetooth",
+        "network#wifi",
+        "network#eth",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "clock"
+    ],
+
+
+    // ~~~~~ MODULE CONFIG ~~~~~
+    "wlr/workspaces":{
+        "on-click": "activate"
+    },
+
+   "bluetooth": {
+        "format": "",
+        "format-disabled": "",
+        "format-connected": "",
+        "tooltip-format": "{device_alias}",
+        "tooltip-format-connected-battery": "{device_alias} ({device_battery_percentage}%)",
+    },
+
+    "network#wifi": {
+        "interface": "wlo1", // (Optional) To force the use of this interface
+        "format": "",
+        "format-wifi": "{icon}",
+    	"format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{essid} ({signalStrength}%) - {bandwidthUpBits} {bandwidthDownBits} ",
+        "format-icons": ["","","","",""]  // ADD MORE depending on signal strength
+    },
+
+    "network#eth": {
+        "interface": "enp*",
+        "format": "",
+        "format-ethernet": "",
+        "tooltip-format": "Ethernet connected"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% ",
+        "format-muted": "婢",
+        "format-icons": {
+            "headphone": "",
+            /* "hands-free": "", */
+            /* "headset": " ", */
+            /* "phone": "", */
+            /* "portable": "", */
+            /* "car": "", */
+            "default": ["", ""]
+        },
+        "max-volume": 150,
+        "scroll-step": 1,
+        "on-click": "helvum",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+        "on-scroll-up": "backlight_control +1",
+        "on-scroll-down": "backlight_control -1"
+    },
+
+    "battery": {
+        "states": {
+            "complete": 100,
+            "normal": 99,
+            "warning": 30,
+            "critical": 15,
+            "alert": 10
+        },
+        "format-complete": "{capacity}% <span color='#6bbc58'>{icon}</span>",
+        "format":          "{capacity}% {icon}",
+        "format-warning":  "{capacity}% <span color='#fc9802'>{icon}</span>",
+        "format-critical": "<span color='#ff4c5b'>{capacity}% {icon}</span>",
+        "format-alert":    "{capacity}% {icon}",
+
+        "format-charging-complete": "<span color='#6bbc58'>{capacity}% <span color='#fca016'></span>{icon}</span>",
+        "format-charging":          "{capacity}% <span color='#fca016'></span>{icon}",
+        "format-charging-warning":  "{capacity}% <span color='#fca016'></span>{icon}",
+        "format-charging-critical": "{capacity}% <span color='#ff4c5b'>{icon}</span>",
+        "format-charging-alert":    "<span color='#ff4c5b'>{capacity}% {icon}</span>",
+
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+        //"format-charging-icons": ["", "", "", "", "", "", "", ""], //Not working
+        //"format-plugged-icons": ["", "", "", "", "", "", "", ""] //Not working
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S} ",
+        "tooltip": true,
+        "tooltip-format": " <big>{:%B}</big>\n<tt><small>{calendar}</small></tt>",
+        "today-format": "<span color='#9C4154'><b>{}</b></span>",
+        "format-calendar-weekdays": "<span color='#8D8FA4'>{}</span>",
+    },
+}
+
+
+/* ~~~~~ UNUSED CONFIG ~~~~~
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+   "keyboard-state": {
+        "numlock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "n",
+            "unlocked": ""
+        }
+    },
+
+    "keyboard-state#caps": {
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "בּ ",
+            "unlocked": ""
+        }
+    },
+
+   "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+*/
