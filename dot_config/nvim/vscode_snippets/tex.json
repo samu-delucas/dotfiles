@@ -858,6 +858,14 @@
       "autotrigger": true
     }
   },
+  "CE": {
+    "prefix": "CE",
+    "description": "C extendido",
+    "body": "\\conj{\\mathbb{C\\}\\} $0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
   "CS": {
     "prefix": "CS",
     "description": "C star",
