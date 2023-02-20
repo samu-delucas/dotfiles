@@ -66,9 +66,10 @@ return require('packer').startup(function(use)
 
     use {
         'lervag/vimtex',
+        branch = 'feat/zathura-wayland',
         opt = true,
         config = function()
-            vim.g.vimtex_view_general_viewer = 'zathura'
+            vim.g.vimtex_view_method = 'zathura_simple'
             vim.g.tex_comment_nospell = 1
         end,
         ft = 'tex'
