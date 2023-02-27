@@ -14,6 +14,8 @@ alias grep='grep --color=auto -i'
 
 alias ipa='ip a'
 
+alias untar='tar -xvzf'
+
 alias g='git'
 alias ga='git add'
 alias gc='git commit -m'
