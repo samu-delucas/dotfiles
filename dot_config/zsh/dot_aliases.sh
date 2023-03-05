@@ -1,6 +1,7 @@
 alias sudo='sudo '
 
 alias :q='exit'
+alias :qaaa='exit'
 alias ea='nv $ALIASFILE'
 
 alias ls='ls --color=auto'
