@@ -7,6 +7,7 @@ PSLINE2='└ %(!.#.$) '
 PS1=$PSLINE1$'\n'$PSLINE2
 
 function virtualenv_info(){
+    PS1=$PSLINE1$'\n'$PSLINE2
     if [[ -n "$VIRTUAL_ENV" ]]; then
         venv="${VIRTUAL_ENV##*/}" # Strip out the path and just leave the env name
         PSLINE1_ENV=$PSLINE1$' %F{#888888}('$venv$')%f'
