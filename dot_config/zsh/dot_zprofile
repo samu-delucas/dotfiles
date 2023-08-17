@@ -1,10 +1,10 @@
 #
 # $ZDOTDIR/.zprofile;
-# 
+#
 # Used for executing USER comands at start, and only
 # when starting as a LOGIN shell
 #
-# Typically used to autostart grafical 
+# Typically used to autostart grafical
 # sessions or set session-wide env variables
 #
 
@@ -17,5 +17,6 @@
 
 # Autostart Hyprland at login (if on tty1)
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec Hyprland
+    export LIBSEAT_BACKEND=logind
+    exec Hyprland
 fi
