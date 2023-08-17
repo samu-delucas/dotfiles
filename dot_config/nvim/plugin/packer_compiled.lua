@@ -191,7 +191,7 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-commentary"
   },
   vimtex = {
-    config = { "\27LJ\2\nh\0\0\2\0\5\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0K\0\1\0\24tex_comment_nospell\fzathura\31vimtex_view_general_viewer\6g\bvim\0" },
+    config = { "\27LJ\2\ng\0\0\2\0\5\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0K\0\1\0\24tex_comment_nospell\19zathura_simple\23vimtex_view_method\6g\bvim\0" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
