@@ -115,7 +115,7 @@
 
     "clock": {
         "interval": 1,
-        "format": "{:%H:%M:%S} ",
+        "format": "{:%H:%M:%OS} ",
         "tooltip": true,
         "tooltip-format": " <big>{:%B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<span color='#9C4154'><b>{}</b></span>",
