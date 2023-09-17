@@ -10,7 +10,7 @@
 
     // ~~~~~ MODULE POSITIONING ~~~~~
     "modules-left": [
-    	"wlr/workspaces"
+    	"hyprland/workspaces"
         //"sway/mode",
         //"custom/media",
         //"tray"
