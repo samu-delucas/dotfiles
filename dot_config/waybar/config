@@ -34,7 +34,7 @@
 
 
     // ~~~~~ MODULE CONFIG ~~~~~
-    "wlr/workspaces":{
+    "hyprland/workspaces":{
         "on-click": "activate"
     },
 
