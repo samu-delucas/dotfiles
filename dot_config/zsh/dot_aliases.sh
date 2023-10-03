@@ -35,8 +35,6 @@ alias sp='\trizen -Ss --color=auto'
 
 alias ip='ip -color'
 
-alias vpnuam='sudo bash ~/.dots/vpnuam'
-alias vpnuamoff='sudo vpnc-disconnect'
 # alias dosbox='dosbox -conf ~/uni/3/micro/dosbox/dosbox.conf ~/uni/3/micro/dosbox/workdir'
 
 alias nf='neofetch'
