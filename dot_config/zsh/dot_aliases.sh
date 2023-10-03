@@ -1,7 +1,7 @@
 alias sudo='sudo '
 
 alias :q='exit'
-alias ea='nv $ALIASFILE'
+alias ea='chezmoi edit $ALIASFILE'
 
 alias ls='ls --color=auto'
 alias la='ls -A'
@@ -22,7 +22,7 @@ alias gc='git commit -m'
 alias gp='git push'
 alias gw='git switch'
 alias adog='git log --all --decorate --oneline --graph'
-alias .git='/usr/bin/git --git-dir=$HOME/.dotsrepo/ --work-tree=$HOME'
+# alias .git='/usr/bin/git --git-dir=$HOME/.dotsrepo/ --work-tree=$HOME'
 
 alias nv='nvim'
 alias vim='nvim'
@@ -37,11 +37,7 @@ alias ip='ip -color'
 
 alias vpnuam='sudo bash ~/.dots/vpnuam'
 alias vpnuamoff='sudo vpnc-disconnect'
-# alias vmplayer='sudo systemctl start vmware-usbarbitrator.path vmware-networks.path; sudo vmplayer'
-alias arqocluster='echo WGtTvzK; ssh -oHostKeyAlgorithms=+ssh-dss clusterArqo'
-alias arqoclusterscp='echo WGtTvzK; scp -oHostKeyAlgorithms=+ssh-dss'
-alias dosbox='dosbox -conf ~/uni/3/micro/dosbox/dosbox.conf ~/uni/3/micro/dosbox/workdir'
-alias activatesi1='source si1pyenv/bin/activate'
+# alias dosbox='dosbox -conf ~/uni/3/micro/dosbox/dosbox.conf ~/uni/3/micro/dosbox/workdir'
 
 alias nf='neofetch'
 
