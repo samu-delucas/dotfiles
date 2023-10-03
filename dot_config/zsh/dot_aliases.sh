@@ -22,7 +22,6 @@ alias gc='git commit -m'
 alias gp='git push'
 alias gw='git switch'
 alias adog='git log --all --decorate --oneline --graph'
-# alias .git='/usr/bin/git --git-dir=$HOME/.dotsrepo/ --work-tree=$HOME'
 
 alias nv='nvim'
 alias vim='nvim'
