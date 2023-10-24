@@ -10,7 +10,7 @@ export TERM=alacritty
 export PATH=/opt/glassfish4/glassfish/bin:$PATH:/home/samuel/.local/bin
 
 if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+    export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
 export APUNTESDIR=$HOME/uni/apuntes-latex
