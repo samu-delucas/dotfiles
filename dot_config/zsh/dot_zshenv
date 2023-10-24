@@ -9,7 +9,8 @@ export EDITOR='nvim'
 export TERM=alacritty
 export PATH=/opt/glassfish4/glassfish/bin:$PATH:/home/samuel/.local/bin
 
-if which ruby >/dev/null && which gem >/dev/null; then
+if which ruby >/dev/null && which gem >/dev/null
+then
     export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
