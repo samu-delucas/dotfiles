@@ -27,7 +27,7 @@ alias nv='nvim'
 alias vim='nvim'
 
 alias pacman='sudo pacman --color=auto'
-alias trizen='trizen --color=auto --noedit'
+alias trizen='trizen --color=auto --noedit --noconfirm'
 alias syu='pacman -Syu'
 alias tsyu='trizen -Syu'
 alias sp='\trizen -Ss --color=auto'
