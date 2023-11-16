@@ -19,3 +19,5 @@ export TEXINPUTS=$APUNTESDIR/clases:$APUNTESDIR/paquetes:
 export ALIASFILE=$ZDOTDIR/.aliases.sh
 # export J2EE_HOME=/opt/glassfish4-web/glassfish
 export AS_JAVA=/usr/lib/jvm/java-8-openjdk
+
+export MOZ_ENABLE_WAYLAND=1
