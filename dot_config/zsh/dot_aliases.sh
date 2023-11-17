@@ -48,6 +48,8 @@ alias venv='virtualenv'
 
 alias fixwifi='sudo systemctl restart NetworkManager.service wpa_supplicant.service systemd-resolved.service'
 
+alias setupminikubedocker='eval $(minikube -p minikube docker-env)'
+
 # DOESN'T WORK PROPERLY
 # Clear and reset wont have \n on the top of the terminal
 # alias clear='NEW_LINE_BEFORE_PROMPT=0;clear'
