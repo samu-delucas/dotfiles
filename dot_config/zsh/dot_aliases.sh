@@ -1,5 +1,12 @@
 alias sudo='sudo '
 
+
+
+
+
+
+
+
 alias :q='exit'
 alias ea='if [ -f $ALIASFILE ]; then MY_PREV_PATH=$(pwd); cd; chezmoi edit -a ${ALIASFILE:13}; cd $MY_PREV_PATH; unset $MY_PREV_PATH; fi' # cd to /home/samuel and edit aliases. ":13" removes "/home/samuel/" from the path, because chezmoi edit needs the path relative to the source directory.
 
