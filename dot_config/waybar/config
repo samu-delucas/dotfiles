@@ -25,6 +25,7 @@
         //"keyboard-state",
         "bluetooth",
         "network#wifi",
+        "network#wifi2",
         "network#eth",
         "pulseaudio",
         "backlight",
@@ -48,6 +49,15 @@
 
     "network#wifi": {
         "interface": "wlo1", // (Optional) To force the use of this interface
+        "format": "",
+        "format-wifi": "{icon}",
+    	"format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{essid} ({signalStrength}%) - {bandwidthUpBits} {bandwidthDownBits} ",
+        "format-icons": ["","","","",""]  // ADD MORE depending on signal strength
+    },
+
+    "network#wifi2": {
+        "interface": "wlp0s20f0u1", // (Optional) To force the use of this interface
         "format": "",
         "format-wifi": "{icon}",
     	"format-disconnected": "", //An empty format will hide the module.
