@@ -5,17 +5,10 @@
 @define-color disabled rgb(100, 100, 100);
 @define-color bottom-line rgba(255,255,255,0.8);
 
-@define-color pink rgb(226, 204, 219);
-@define-color pinkDrk rgb(195, 149, 180);
-@define-color pinkSat rgb(229, 201, 220);
-@define-color pinkDesat rgb(224, 206, 218);
-
-
-
 * {
     font-family: JetBrains Mono Nerd Font;
     font-size: 10pt;
-    font-weight:500;
+    font-weight:300;
 }
 
 window#waybar {
@@ -47,7 +40,7 @@ button{
     margin: 0 0.15em;
     border: none;
     box-shadow: inset 0 -.08em @disabled;
-    transition: box-shadow .1s ease-in-out, color .1s ease-in-out;
+    transition: box-shadow .15s ease-in-out, color .1s ease-in-out;
 }
 
 #workspaces button.active {
@@ -55,10 +48,9 @@ button{
     outline: none;
     padding-bottom: 2.98px;
     box-shadow: inset 0 -.08em @bottom-line;
-    border-bottom: solid .08em @bottom-line;
 }
 
-#workspaces button.hover {
+#workspaces button:hover {
     background: none;
     text-shadow: none;
     box-shadow: inset 0 -40px @bottom-line;
@@ -95,7 +87,7 @@ button{
 #mode,
 #idle_inhibitor,
 #mpd,
-#custom-session,
+#custom-notification,
 #network.ethernet,
 #network.wifi,
 #network.linked,
@@ -108,7 +100,14 @@ button{
 
 #backlight,
 #pulseaudio {
-    padding-right: 1em;
+    padding-right: 0.85em;
+}
+
+#custom-notification.dnd-notification,
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-notification,
+#custom-notification.dnd-inhibited-none {
+    color: @disabled;
 }
 
 #pulseaudio.muted {
@@ -130,7 +129,7 @@ button{
 }
 
 #bluetooth.discovering {
-    animation: pulsePink 2s ease-in-out infinite;
+    animation: pulse 2s ease-in-out infinite;
 }
 
 #bluetooth.off {
@@ -162,7 +161,7 @@ button{
     100% {  }
 }
 
-@keyframes pulsePink {
+@keyframes pulse {
     0% {  }
     40% { background: @bottom-line;  color: @foregroundAlt; }
     60% { background: @bottom-line;  color: @foregroundAlt; }
