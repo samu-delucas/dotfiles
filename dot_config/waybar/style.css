@@ -73,20 +73,10 @@ button{
     border-radius: 5px;
 }
 
-#clock,
 #battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
 #backlight,
 #network,
 #pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd,
 #custom-notification,
 #network.ethernet,
 #network.wifi,
