@@ -14,11 +14,10 @@
         //"wlr/taskbar",
         //"custom/media",
     ],
-    "modules-center": [
+    //"modules-center": [
     	//"hyprland/window"
         //"tray",
-        "clock",
-    ],
+    //],
     "modules-right": [
     	//"mpd",
     	//"idle_inhibitor",
@@ -32,6 +31,7 @@
         "backlight",
         "battery",
         "custom/notification",
+        "clock",
     ],
 
 
