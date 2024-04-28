@@ -28,8 +28,8 @@ alias vim='nvim'
 
 alias pacman='sudo pacman --color=auto'
 alias trizen='trizen --color=auto --noedit --noconfirm'
-alias syu='pacman -Syu & notify-send "pacman -Syu" "Done: pacman update completed\!"'
-alias tsyu='trizen -Syu & notify-send "trizen -Syu" "Done: AUR + pacman update completed\!"'
+alias syu='pacman -Syu && notify-send "pacman -Syu" "Done: pacman update completed\!"'
+alias tsyu='trizen -Syu && notify-send "trizen -Syu" "Done: AUR + pacman update completed\!"'
 alias sp='\trizen -Ss --color=auto'
 
 alias ip='ip -color'
